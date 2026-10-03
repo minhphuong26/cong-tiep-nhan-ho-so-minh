@@ -31,8 +31,8 @@ Trang `/login` chưa được dựng ở bước này. Học viên sẽ tự d�
 Bản hiện tại (Tuần 1) chỉ có UI tĩnh và mock data, chưa gọi API hay database thật. Các tuần tiếp theo sẽ lần lượt thêm:
 
 ### Tuần 2 - Chatbot QnA thật
-- [ ] Chatbot gọi Gemini API thật, trả lời dựa trên bộ QnA cho sẵn (`systemInstruction`)
-- [ ] Giữ mạch hội thoại trong phiên làm việc
+- [x] Chatbot gọi Gemini API thật, trả lời dựa trên bộ QnA cho sẵn (`systemInstruction`)
+- [x] Giữ mạch hội thoại trong phiên làm việc
 
 ### Tuần 3 - Supabase, form báo giá, dashboard
 - [ ] Kết nối Supabase (qua Connector), tạo bảng `requests`, `schools`, `conversations`/`messages`
@@ -67,8 +67,9 @@ Bản hiện tại (Tuần 1) chỉ có UI tĩnh và mock data, chưa gọi API 
 
 ## Biến môi trường
 
-Chưa cần thiết để chạy `npm run dev` ở bản này. Xem [`.env.example`](.env.example)
-cho danh sách biến sẽ dùng khi nối Gemini (Tuần 2), Supabase (Tuần 3) và đăng nhập magic link (Tuần 6).
+Sao chép [`.env.example`](.env.example) thành `.env.local` rồi điền giá trị. Từ Tuần 2, chatbot trên trang chủ cần
+`GEMINI_API_KEY` (lấy tại [Google AI Studio](https://aistudio.google.com/apikey)); thiếu biến này trang vẫn chạy nhưng chatbot báo lỗi.
+Các biến Supabase (Tuần 3) và URL site cho magic link (Tuần 6) để trống được cho tới khi cần.
 
 ## Deploy
 
